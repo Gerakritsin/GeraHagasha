@@ -7,5 +7,9 @@ router.get('/', function(req, res, next) {
   res.sendFile("index.html",{root: path.join(__dirname,"./")});
   //res.render('index', { title: 'Express' });
 });
+router.get('/about', function(req, res, next) {
+  res.sendFile("about.html",{root: path.join(__dirname,"./")});
+  //res.render('index', { title: 'Express' });
+});
 
 module.exports = router;
