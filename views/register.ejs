@@ -1,0 +1,119 @@
+<!doctype html>
+<!-- Website template by freewebsitetemplates.com -->
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Register</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<link rel="stylesheet" type="text/css" href="css/mobile.css">
+	<script src="js/mobile.js" type="text/javascript"></script>
+	<script>
+
+		var form = document.querySelector("body");
+
+		if (form){
+			form.addEventListener("submit", register);
+		}
+		
+
+		function register(e) {
+			e.preventDefault();
+			alert();
+			// take value from user form
+			var mail = document.querySelector('#mail').value;
+			var pass = document.querySelector('#pass').value;
+
+			var res = fetch("/api/register", {
+				method: "post",
+				headers: {
+					'Accept': 'application/json',
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify({
+					mail: mail,
+					password: pass
+				})
+
+			});
+
+			alert(res.json())
+			
+		}
+
+	</script>
+</head>
+
+<body>
+	<div id="page">
+		<div id="header">
+			<div>
+				<ul id="navigation">
+					<li>
+						<a href="index.html">Home</a>
+					</li>
+					<li class="selected">
+						<a href="about.html">About</a>
+					</li>
+					<li class="menu">
+						<a href="projects.html">Projects</a>
+						<ul class="primary">
+							<li>
+								<a href="proj1.html">proj 1</a>
+							</li>
+						</ul>
+					</li>
+					<li class="menu">
+						<a href="blog.html">Blog</a>
+						<ul class="secondary">
+							<li>
+								<a href="singlepost.html">Single post</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="contact.html">Contact</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div id="body" class="about">
+			<div class="header">
+				<div>
+
+
+					<h1>Register</h1>
+					<form>
+						<span>E-Mail</span>
+						<input id="mail" type="email" />
+						<span>Password</span>
+						<input id="pass" type="password" />
+						<input id="submit" type="submit" />
+					</form>
+
+
+					<div id="footer">
+						<div class="connect">
+							<div>
+								<h1>FOLLOW OUR MISSIONS ON</h1>
+								<div>
+									<a href="http://freewebsitetemplates.com/go/facebook/" class="facebook">facebook</a>
+									<a href="http://freewebsitetemplates.com/go/twitter/" class="twitter">twitter</a>
+									<a href="http://freewebsitetemplates.com/go/googleplus/"
+										class="googleplus">googleplus</a>
+									<a href="http://freewebsitetemplates.com/go/pinterest/"
+										class="pinterest">pinterest</a>
+								</div>
+							</div>
+						</div>
+						<div class="footnote">
+							<div>
+								<p>&copy; 2022 BY GERA KRITSIN | ALL RIGHTS RESERVED</p>
+							</div>
+						</div>
+					</div>
+				</div>
+</body>
+
+</html>-->
